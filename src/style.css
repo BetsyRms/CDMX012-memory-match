@@ -1,49 +1,47 @@
 body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: url(STADIUM.jpg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://www.ssbwiki.com/images/thumb/7/73/SSBU-Pok%C3%A9mon_Stadium_2.png/1200px-SSBU-Pok%C3%A9mon_Stadium_2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 header{
-    text-align: left; 
-    font-family: monaco Black; 
-    font-weight: bold; 
-    font-size: 30px; 
-    color: #fff; 
-    text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 0 #acacac, 0 6px 1px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
+  text-align: left; 
+  font-family: monaco Black; 
+  font-weight: bold; 
+  font-size: 30px; 
+  color: #fff; 
+  text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 0 #acacac, 0 6px 1px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
 }
 .cards-conteiner{
-    margin: 0px 100px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    background-color: #00008b46;
-    border-radius: 60px;
-    box-shadow: -1px -1px 1px #ffffff,
-    0px 4px 1px #ffffff,
-    4px 4px 5px #ffffff,
-    0px 0px 7px #ffffff;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  background-color: #00008b60;
+  border-radius: 60px;
+  box-shadow: -1px -1px 1px #ffffff,
+  0px 4px 1px #ffffff,
+  4px 4px 5px #ffffff,
+  0px 0px 7px #ffffff;
 }
 .pokemons{
-    width: 80px;
-    margin: 45px 45px;
+  width: 80px;
+  margin: 45px 45px;
 }
 .pokeball{
-    position: absolute;
-    width: 130px;
-    margin: 20px 20px;
-    cursor: pointer;
+  position: absolute;
+  width: 130px;
+  margin: 20px 50px;
+  cursor: pointer;
 }
 .pokeballs-pokemons{
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .button {
   align-items: center;
@@ -67,6 +65,7 @@ header{
   touch-action: manipulation;
   white-space: nowrap;
   cursor: pointer;
+  z-index: 10;
 }
 .button:active,
 .button:hover {
@@ -88,4 +87,34 @@ header{
     font-size: 24px;
     min-width: 196px;
   }
+}
+#countdown{
+  text-align: left; 
+  font-family: monaco Black; 
+  font-weight: bold; 
+  font-size: 30px; 
+  color: #fff; 
+  text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 0 #acacac, 0 6px 1px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
+  z-index: 40;
+}
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+}
+
+#text{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
 }
