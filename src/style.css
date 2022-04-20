@@ -6,6 +6,7 @@ body{
   background-image: url(https://www.ssbwiki.com/images/thumb/7/73/SSBU-Pok%C3%A9mon_Stadium_2.png/1200px-SSBU-Pok%C3%A9mon_Stadium_2.png);
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: black;
 }
 header{
   text-align: left; 
